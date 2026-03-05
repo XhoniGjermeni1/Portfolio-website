@@ -1,0 +1,26 @@
+<div class="search-wrapper">
+  <div class="search-container">
+    <!-- Two way binding.Informacioni kalon ne 2 drejtime ne kohe reale -->
+    <!-- Fale ngModel fjala kerkim merr inputin ne kohe -->
+    <input type="text" [(ngModel)]="kerkim" placeholder="Kerko projektin..." />
+    <p>
+      Duke kerkuar per: <strong> {{ kerkim }} </strong>
+    </p>
+  </div>
+</div>
+<div class="projects-grid">
+  @if (projektetEFiltruara.length > 0) {
+    @for (p of projektetEFiltruara; track p.titulli) {
+      <!-- Property binding  dhe event binding-->
+      <app-project-card [projekt]="p" (kopjoUShtyp)="kopjo($event)"> </app-project-card>
+    }
+  } @else {
+    <div class="no-results">
+      <h3>Ups! Nuk u gjet asnjë projekt</h3>
+      <p>
+        Nuk gjetëm asgjë për "<strong>{{ kerkim }}</strong
+        >". Provo një fjalë tjetër.
+      </p>
+    </div>
+  }
+</div>

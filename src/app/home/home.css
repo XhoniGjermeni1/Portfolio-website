@@ -1,0 +1,25 @@
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  color: #333;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+header h1 {
+  color: #dd0031; /* Ngjyra karakteristike e Angular */
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  color: #777;
+}
