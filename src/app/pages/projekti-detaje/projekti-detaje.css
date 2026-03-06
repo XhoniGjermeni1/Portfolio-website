@@ -1,0 +1,88 @@
+/* Zhduk çdo margjinë të tepërt dhe bëj ndarjen 50/50 */
+.split-screen {
+  display: flex;
+  min-height: 80vh; /* Zë pothuajse gjithë lartësinë e faqes */
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Kolona e Fotos */
+.visual-side {
+  flex: 1;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 30px; /* Fotoja mbush gjithë hapësirën pa u deformuar */
+}
+
+/* Kolona e Shkrimeve */
+.details-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.content-holder {
+  max-width: 500px;
+}
+
+.project-name {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  letter-spacing: -2px;
+}
+
+.technology {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Butoni GitHub */
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+
+.github-link:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Për celular: Fotoja sipër, Teksti poshtë */
+@media (max-width: 900px) {
+  .split-screen {
+    flex-direction: column;
+  }
+
+  .visual-side {
+    height: 300px;
+  }
+
+  .details-side {
+    padding: 40px 20px;
+  }
+
+  .project-name {
+    font-size: 2.5rem;
+  }
+}

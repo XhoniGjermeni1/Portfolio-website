@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ProjectCardComponent } from '../components/project-card/project-card';
+import { ProjectCardComponent } from '../../shared/components/project-card/project-card';
+import { ProjekteService } from '../../../services/projekte';
 
 @Component({
   selector: 'app-projekte',
@@ -11,26 +12,12 @@ import { ProjectCardComponent } from '../components/project-card/project-card';
 })
 export class ProjekteComponent {
   kerkim: string = '';
-  projekte = [
-    {
-      imazhi: 'assets/images/hikim.png',
-      titulli: 'Hikim',
-      pershkrimi: 'Laravel',
-      linku: 'https://github.com/sildi-sh/amazon-project',
-    },
-    {
-      imazhi: 'assets/images/hikim.png',
-      titulli: 'Algoritmet',
-      pershkrimi: 'Vizualizimi i Merge Sort',
-      linku: 'https://github.com/sildi-sh/amazon-project',
-    },
-    {
-      imazhi: 'assets/images/hikim.png',
-      titulli: 'Projekti tjetër',
-      pershkrimi: 'Përshkrim i shkurtër këtu',
-      linku: 'https://github.com/sildi-sh/amazon-project',
-    },
-  ];
+  // me ane te inject marrim te dhenat e projekteve ne faqen ketu
+  // Rreshti i pare eshte dependency injection. Me inject thua qe me duhet mjeti qe menaxhon projektet
+  //Ne fillim pra krijojme nje lidhje me listen qe gjendet ne services
+  // e pqstaj ;arri; te dhenat te rreshti i 2me metoden get
+  private projekteService = inject(ProjekteService);
+  projekte = this.projekteService.getProjekte();
 
   kopjo(link: string) {
     navigator.clipboard

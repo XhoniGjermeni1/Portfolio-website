@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="nav-shell">
+    <a class="brand" routerLink="/" aria-label="Kreu">
+      <span class="brand-mark">XG</span>
+      <span class="brand-text">Xhoni Gjermeni</span>
+    </a>
+
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          >Kreu</a
+        >
+      </li>
+      <li>
+        <a routerLink="/projekte" routerLinkActive="active">Projekte</a>
+      </li>
+    </ul>
+
+    <a class="nav-cta" routerLink="/projekte">Shiko Punet</a>
+  </div>
+</nav>

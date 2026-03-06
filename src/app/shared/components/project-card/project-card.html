@@ -1,7 +1,8 @@
-<a [href]="projekt.linku" target="_blank" class="project-link">
+<a [routerLink]="['/projekte', getSlug()]" class="project-link">
   <div class="card" [style.background-image]="'url(' + projekt.imazhi + ')'">
     <div class="overlay">
       <h3>{{ projekt.titulli | uppercase }}</h3>
+
       <p>
         {{ projekt.pershkrimi | slice: 0 : 50 }}{{ projekt.pershkrimi.length > 50 ? '...' : '' }}
       </p>
