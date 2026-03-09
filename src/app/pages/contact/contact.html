@@ -1,0 +1,37 @@
+<section class="contact-section">
+  <div class="form-card">
+    <h2>Më shkruani një mesazh</h2>
+    <p>Jam i hapur për bashkëpunime dhe mundësi të reja pune!</p>
+
+    <form [formGroup]="contactForm" (ngSubmit)="dergoMesazhin()">
+      <div class="input-group">
+        <label>Emri i Plotë</label>
+        <input type="text" formControlName="emri" placeholder="Emri juaj..." />
+        @if (contactForm.get('emri')?.invalid && contactForm.get('emri')?.touched) {
+          <small class="error">Ju lutem vendosni vetëm shkronja (min 3).</small>
+        }
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" placeholder="email@shembull.com" />
+        @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+          <small class="error">Vendosni një adresë email-i të vlefshme.</small>
+        }
+      </div>
+
+      <div class="input-group">
+        <label>Mesazhi juaj</label>
+        <textarea
+          formControlName="mesazhi"
+          rows="5"
+          placeholder="Për çfarë dëshironi të bisedojmë?"
+        ></textarea>
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">
+        Dërgo Mesazhin
+      </button>
+    </form>
+  </div>
+</section>

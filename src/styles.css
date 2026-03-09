@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --font-ui: 'Manrope', 'Montserrat', sans-serif;
+  --bg-page-light: linear-gradient(160deg, #eef6ff 0%, #e7f2ff 55%, #e8f8f6 100%);
+  --bg-page-dark: linear-gradient(160deg, #7f98b8 0%, #6f86a3 55%, #5f7693 100%);
+  --text-strong: #0f172a;
+  --text-body: #334155;
+  --border-soft: rgba(15, 58, 87, 0.16);
+  --btn-primary: linear-gradient(135deg, #0f766e, #0b3a57);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-ui);
+  color: var(--text-body);
+  background: #edf5ff;
+}

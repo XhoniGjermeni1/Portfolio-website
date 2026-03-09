@@ -1,88 +1,100 @@
-/* Zhduk çdo margjinë të tepërt dhe bëj ndarjen 50/50 */
-.split-screen {
-  display: flex;
-  min-height: 80vh; /* Zë pothuajse gjithë lartësinë e faqes */
-  width: 100%;
-  background-color: #ffffff;
+:host {
+  display: block;
+  min-height: calc(100vh - 76px);
+  background: var(--bg-page-light);
 }
 
-/* Kolona e Fotos */
+.split-screen {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: calc(100vh - 76px);
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 26px 16px 34px;
+  gap: 18px;
+}
+
 .visual-side {
-  flex: 1;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #dbeafe;
+  border: 1px solid rgba(15, 58, 87, 0.16);
+  box-shadow: 0 16px 34px rgba(15, 58, 87, 0.12);
 }
 
 .visual-side img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 30px; /* Fotoja mbush gjithë hapësirën pa u deformuar */
+  display: block;
 }
 
-/* Kolona e Shkrimeve */
 .details-side {
-  flex: 1;
   display: flex;
   align-items: center;
-  padding: 60px;
 }
 
 .content-holder {
-  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 58, 87, 0.16);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 16px 32px rgba(15, 58, 87, 0.08);
 }
 
 .project-name {
-  font-size: 4rem;
+  font-size: clamp(2rem, 4.2vw, 3rem);
   font-weight: 800;
-  color: #1a1a1a;
-  margin: 0 0 10px 0;
-  letter-spacing: -2px;
+  color: #0f172a;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
 }
 
 .technology {
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 40px;
+  font-size: 1.04rem;
+  color: #475569;
+  margin: 0 0 28px;
+  line-height: 1.72;
 }
 
-/* Butoni GitHub */
 .github-link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background-color: #1a1a1a;
-  color: white;
-  padding: 16px 32px;
-  border-radius: 12px;
+  gap: 10px;
+  background: var(--btn-primary);
+  color: #e6f7ff;
+  padding: 12px 18px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: 0.2s ease;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .github-link:hover {
-  background-color: #333;
-  transform: scale(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(11, 58, 87, 0.35);
 }
 
-/* Për celular: Fotoja sipër, Teksti poshtë */
-@media (max-width: 900px) {
+.github-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 960px) {
   .split-screen {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+    gap: 14px;
   }
 
   .visual-side {
-    height: 300px;
+    min-height: 280px;
   }
 
-  .details-side {
-    padding: 40px 20px;
-  }
-
-  .project-name {
-    font-size: 2.5rem;
+  .content-holder {
+    padding: 22px;
   }
 }

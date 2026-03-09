@@ -1,0 +1,35 @@
+<section class="about-container">
+  <div class="content-grid">
+    <div class="bio-text">
+      <h2 class="section-title">Rreth Meje</h2>
+      <p>
+        Pershendetje! Une jam <strong>{{ emri }}</strong
+        >, nje zhvillues softueri i fokusuar ne ndertimin e aplikacioneve funksionale dhe te
+        mirestrukturuara.
+      </p>
+      <p>
+        Kam realizuar projekte ne zhvillim web dhe software, ku kam aplikuar praktika te mira ne
+        arkitekture, organizim kodi dhe menaxhim versionesh. Eksperienca ne projekte me ka ndihmuar
+        te punoj me qasje analitike dhe orientim te qarte drejt zgjidhjes se problemeve.
+      </p>
+      <p>
+        Njohurite e mia kane baza te forta ne zhvillim backend/frontend. Prioriteti im eshte te
+        ndertoj zgjidhje te pastra, te mirembajtshme dhe me performance te larte.
+      </p>
+      <div class="cta-box">
+        <span class="status-badge">I fokusuar ne role Junior me impakt real</span>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+      <h1>Tech Stack</h1>
+      @for (tech of teknologjite; track tech.emri) {
+        <div class="skill-wrapper">
+          <div class="skill-info">
+            <span [style.color]="tech.ngjyra">{{ tech.emri }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

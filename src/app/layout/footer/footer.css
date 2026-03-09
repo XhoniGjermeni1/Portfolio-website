@@ -1,7 +1,7 @@
 .footer {
-  background: radial-gradient(circle at 20% 0%, #14243f 0%, #091224 52%, #070d1a 100%);
-  color: #cbd5e1;
-  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(160deg, #7f98b8 0%, #6f86a3 55%, #5f7693 100%);
+  color: #dbe7f5;
+  border-top: 1px solid rgba(226, 232, 240, 0.2);
   font-family: 'Manrope', 'Montserrat', sans-serif;
 }
 
@@ -43,7 +43,7 @@
 .footer-links h4,
 .footer-contact h4 {
   margin: 0 0 14px;
-  color: #e2e8f0;
+  color: #f1f5f9;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -59,7 +59,7 @@
 .footer-contact a {
   display: inline-block;
   margin-bottom: 10px;
-  color: #cbd5e1;
+  color: #dbe7f5;
   text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -79,9 +79,9 @@
   width: min(1120px, 92%);
   margin: 0 auto;
   padding: 16px 0 26px;
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  border-top: 1px solid rgba(226, 232, 240, 0.18);
   font-size: 0.88rem;
-  color: #94a3b8;
+  color: #c7d7ea;
 }
 
 .footer-bottom p {
