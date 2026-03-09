@@ -17,9 +17,9 @@
 .visual-side {
   border-radius: 18px;
   overflow: hidden;
-  background: #dbeafe;
-  border: 1px solid rgba(15, 58, 87, 0.16);
-  box-shadow: 0 16px 34px rgba(15, 58, 87, 0.12);
+  background: rgba(15, 23, 42, 0.58);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow: 0 16px 34px rgba(2, 6, 23, 0.3);
 }
 
 .visual-side img {
@@ -36,17 +36,17 @@
 
 .content-holder {
   width: 100%;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(15, 58, 87, 0.16);
+  background: rgba(15, 23, 42, 0.52);
+  border: 1px solid rgba(148, 163, 184, 0.24);
   border-radius: 18px;
   padding: 32px;
-  box-shadow: 0 16px 32px rgba(15, 58, 87, 0.08);
+  box-shadow: 0 16px 32px rgba(2, 6, 23, 0.25);
 }
 
 .project-name {
   font-size: clamp(2rem, 4.2vw, 3rem);
   font-weight: 800;
-  color: #0f172a;
+  color: #eef4ff;
   margin: 0 0 10px;
   letter-spacing: -0.02em;
   line-height: 1.08;
@@ -54,7 +54,7 @@
 
 .technology {
   font-size: 1.04rem;
-  color: #475569;
+  color: #c8d6e8;
   margin: 0 0 28px;
   line-height: 1.72;
 }

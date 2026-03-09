@@ -2,9 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(89, 110, 138, 0.9);
+  background: var(--bg-page-dark);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.22);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.18);
+  box-shadow: 0 8px 22px rgba(2, 6, 23, 0.24);
   font-family: 'Manrope', 'Montserrat', sans-serif;
 }
 

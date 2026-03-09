@@ -1,10 +1,10 @@
 :root {
   --font-ui: 'Manrope', 'Montserrat', sans-serif;
-  --bg-page-light: linear-gradient(160deg, #eef6ff 0%, #e7f2ff 55%, #e8f8f6 100%);
-  --bg-page-dark: linear-gradient(160deg, #7f98b8 0%, #6f86a3 55%, #5f7693 100%);
-  --text-strong: #0f172a;
-  --text-body: #334155;
-  --border-soft: rgba(15, 58, 87, 0.16);
+  --bg-page-light: linear-gradient(180deg, #2b384d 0%, #243144 100%);
+  --bg-page-dark: linear-gradient(180deg, #3d5474 0%, #344a69 100%);
+  --text-strong: #eef4ff;
+  --text-body: #c8d6e8;
+  --border-soft: rgba(148, 163, 184, 0.26);
   --btn-primary: linear-gradient(135deg, #0f766e, #0b3a57);
 }
 
@@ -23,5 +23,5 @@ body {
 body {
   font-family: var(--font-ui);
   color: var(--text-body);
-  background: #edf5ff;
+  background: #223145;
 }

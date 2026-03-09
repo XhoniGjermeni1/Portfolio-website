@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(160deg, #7f98b8 0%, #6f86a3 55%, #5f7693 100%);
+  background: var(--bg-page-dark);
   color: #dbe7f5;
   border-top: 1px solid rgba(226, 232, 240, 0.2);
   font-family: 'Manrope', 'Montserrat', sans-serif;

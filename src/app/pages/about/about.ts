@@ -14,15 +14,15 @@ export class AboutComponent {
   teknologjite = [
     {
       emri: 'Angular',
-      ngjyra: '#c62828',
+      ngjyra: '#ff6b6b',
     },
     {
       emri: 'Java & Spring Boot',
-      ngjyra: '#2e7d32',
+      ngjyra: '#6ee7b7',
     },
     {
       emri: 'Git',
-      ngjyra: '#f4511e',
+      ngjyra: '#fdba74',
     },
   ];
 }
