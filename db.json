@@ -1,0 +1,25 @@
+{
+  "projekte": [
+    {
+      "id": "1",
+      "titulli": "Hikim",
+      "pershkrimi": "Laravel",
+      "imazhi": "assets/images/hikim.png",
+      "linku": "https://github.com/sildi-sh/amazon-project"
+    },
+    {
+      "id": "2",
+      "titulli": "Algoritmet",
+      "pershkrimi": "Vizualizimi i Merge Sort",
+      "imazhi": "assets/images/hikim.png",
+      "linku": "https://github.com/sildi-sh/amazon-project"
+    },
+    {
+      "id": "3",
+      "titulli": "Projekti tjetër",
+      "pershkrimi": "Përshkrim i shkurtër këtu",
+      "imazhi": "assets/images/hikim.png",
+      "linku": "https://github.com/sildi-sh/amazon-project"
+    }
+  ]
+}

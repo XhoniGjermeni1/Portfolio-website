@@ -1,6 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Projekti } from '../../../../services/projekte';
+// 1. Importojmë Service-in nga dosja e tij
+// import { ProjekteService } from '../../../services/projekte';
+
+// 2. Importojmë Modelin drejtpërdrejt nga dosja models
+import { Projekti } from '../../../models/projekti.model';
 import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-project-card',

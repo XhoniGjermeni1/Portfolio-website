@@ -1,17 +1,15 @@
 <div class="search-wrapper">
   <div class="search-container">
-    <!-- Two way binding.Informacioni kalon ne 2 drejtime ne kohe reale -->
-    <!-- Fale ngModel fjala kerkim merr inputin ne kohe -->
     <input type="text" [(ngModel)]="kerkim" placeholder="Kerko projektin..." />
     <p>
-      Duke kerkuar per: <strong> {{ kerkim }} </strong>
+      Duke kerkuar per: <strong> {{ kerkim.trim() }} </strong>
     </p>
   </div>
 </div>
+
 <div class="projects-grid">
   @if (projektetEFiltruara.length > 0) {
-    @for (p of projektetEFiltruara; track p.titulli) {
-      <!-- Property binding  dhe event binding-->
+    @for (p of projektetEFiltruara; track p.id) {
       <app-project-card [projekt]="p" (kopjoUShtyp)="kopjo($event)"> </app-project-card>
     }
   } @else {
