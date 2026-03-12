@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProjekteService } from '../../../services/projekte';
 
@@ -16,22 +16,23 @@ export class ProjektiDetajeComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private projekteService = inject(ProjekteService);
-
+  private cdr = inject(ChangeDetectorRef);
   emriIProjektit: string | null = '';
   projektiZgjedhur: Projekti | undefined;
 
   ngOnInit(): void {
-    // 1. Marrim emrin nga URL (psh: 'rentalsoft-web')
     this.emriIProjektit = this.route.snapshot.paramMap.get('id');
 
     if (this.emriIProjektit) {
-      // KORRIGJIM: Meqenëse të dhënat vijnë nga serveri, duhet .subscribe()
       this.projekteService.getProjektiByTitulli(this.emriIProjektit).subscribe({
+        // Tani 'projekt' vjen fiks si një objekt (Projekti) ose undefined
         next: (projekt) => {
-          this.projektiZgjedhur = projekt;
-
-          // LOGJIKA E RE: Kontrolli bëhet BRENDA subscribe, pasi të vijë përgjigja
-          if (!this.projektiZgjedhur) {
+          if (projekt) {
+            // U gjet! Fute direkt te variabla
+            this.projektiZgjedhur = projekt;
+            this.cdr.detectChanges();
+          } else {
+            // Nuk u gjet (undefined)
             alert(`Kujdes: Projekti "${this.emriIProjektit}" nuk ekziston!`);
             this.router.navigate(['/projekte']);
           }

@@ -61,7 +61,9 @@
   margin-bottom: 10px;
   color: #dbe7f5;
   text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .footer-links a:hover,
@@ -104,4 +106,22 @@
     grid-template-columns: 1fr;
     padding-top: 38px;
   }
+}
+.social-icon {
+  color: #94a3b8;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+}
+
+/* Ngjyrat kur kalon mausin sipër */
+.social-icon:hover {
+  transform: translateY(-3px); /* Lëviz pak lart */
+}
+
+/* Ngjyra specifike për çdo rrjet */
+.social-icon:hover svg {
+  color: #38bdf8; /* Blu e hapur për GitHub/LinkedIn */
 }

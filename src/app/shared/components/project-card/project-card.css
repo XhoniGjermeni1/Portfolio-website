@@ -5,15 +5,21 @@
 }
 
 .card {
-  background-size: cover;
+  background-size: contain; /* Fotoja do të duket e gjitha */
+  background-repeat: no-repeat; /* E rëndësishme: mos lejo përsëritjen e fotos */
+  background-position: center;
+  background-color: #f8f9fa; /* Opsionale: një ngjyrë për pjesët që mbeten bosh */
   background-position: center;
   border: 1px solid rgba(15, 58, 87, 0.2);
   border-radius: 14px;
   text-align: center;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
   box-shadow: 0 10px 20px rgba(15, 58, 87, 0.12);
 }
 
@@ -62,7 +68,9 @@
   color: #e6f7ff;
   background: var(--btn-primary);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .copy-btn:hover {

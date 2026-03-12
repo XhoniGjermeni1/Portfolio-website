@@ -15,13 +15,44 @@
 }
 
 .visual-side {
-  border-radius: 18px;
-  overflow: hidden;
-  background: rgba(15, 23, 42, 0.58);
-  border: 1px solid rgba(148, 163, 184, 0.24);
-  box-shadow: 0 16px 34px rgba(2, 6, 23, 0.3);
+  /* 1. Ktheje imazhin në bllok që të mund ta qendërzojmë */
+  display: block;
+  margin: 0 auto; /* E çon në mes të hapësirës së vet */
+
+  /* 2. Madhësia "e artë": as e vogël, as gjigande */
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Ruan formën e ekranit të laptopit */
+
+  /* 3. Stilimi i imazhit (Hija dhe Këndet) */
+  border-radius: 20px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* 4. Si të rrijë fotoja brenda "kornizës" */
+  object-fit: cover; /* E mbush të gjithë kornizën që të duket bukur */
+  object-position: top center; /* Tregon menunë e Amazon (Search bar) */
+
+  /* 5. Një tranzicion i lehtë për hover */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
+.visual-side:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Rregullimi i Flex-it që të mos e shtyjë tekstin */
+.split-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 20px;
+}
 .visual-side img {
   width: 100%;
   height: 100%;
@@ -70,7 +101,9 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .github-link:hover {

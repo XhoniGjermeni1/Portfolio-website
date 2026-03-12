@@ -5,19 +5,19 @@
       "titulli": "Hikim",
       "pershkrimi": "Laravel",
       "imazhi": "assets/images/hikim.png",
-      "linku": "https://github.com/sildi-sh/amazon-project"
+      "linku": "https://github.com/XhoniGjermeni1/Hikim"
     },
     {
       "id": "2",
-      "titulli": "Algoritmet",
-      "pershkrimi": "Vizualizimi i Merge Sort",
-      "imazhi": "assets/images/hikim.png",
-      "linku": "https://github.com/sildi-sh/amazon-project"
+      "titulli": "Amazon Clone",
+      "pershkrimi": "",
+      "imazhi": "assets/images/Amazon-Clone.png",
+      "linku": "https://github.com/XhoniGjermeni1/Amazon-Clone"
     },
     {
       "id": "3",
       "titulli": "Projekti tjetër",
-      "pershkrimi": "Përshkrim i shkurtër këtu",
+      "pershkrimi": "",
       "imazhi": "assets/images/hikim.png",
       "linku": "https://github.com/sildi-sh/amazon-project"
     }
