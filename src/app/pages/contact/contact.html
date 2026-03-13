@@ -7,14 +7,16 @@
       <div class="input-group">
         <label>Emri i Plotë</label>
         <input type="text" formControlName="emri" placeholder="Emri juaj..." />
+
         @if (contactForm.get('emri')?.invalid && contactForm.get('emri')?.touched) {
-          <small class="error">Ju lutem vendosni vetëm shkronja (min 3).</small>
+          <small class="error">Ju lutem vendosni vetëm shkronja.</small>
         }
       </div>
 
       <div class="input-group">
         <label>Email</label>
         <input type="email" formControlName="email" placeholder="email@shembull.com" />
+
         @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
           <small class="error">Vendosni një adresë email-i të vlefshme.</small>
         }
@@ -27,6 +29,10 @@
           rows="5"
           placeholder="Për çfarë dëshironi të bisedojmë?"
         ></textarea>
+
+        @if (contactForm.get('mesazhi')?.invalid && contactForm.get('mesazhi')?.touched) {
+          <small class="error">Mesazhi duhet të ketë të paktën 10 karaktere.</small>
+        }
       </div>
 
       <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">

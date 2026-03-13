@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -10,26 +11,33 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
   styleUrl: './contact.css',
 })
 export class ContactComponent {
-  // Krijojmë grupin e formës me rregulla strikte
   contactForm = new FormGroup({
-    emri: new FormControl('', [
-      Validators.required,
-      Validators.pattern('^[a-zA-Z ]+$'), // Regex: Vetëm shkronja dhe hapësira
-    ]),
-    email: new FormControl('', [
-      Validators.required,
-      Validators.email, // Validator i gatshëm i Angular
-    ]),
-    mesazhi: new FormControl('', [
-      Validators.required,
-      Validators.minLength(10), // Minimumi 10 karaktere
-    ]),
+    emri: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    mesazhi: new FormControl('', [Validators.required, Validators.minLength(10)]),
   });
 
   dergoMesazhin() {
     if (this.contactForm.valid) {
-      alert('Faleminderit! Mesazhi juaj u dërgua me sukses.');
-      this.contactForm.reset(); // Pastron formën automatikisht
+      // Vendos ID-të e tua që more te faqja e EmailJS
+      const serviceID = 'service_p3oapqg';
+      const templateID = 'template_btcmqvd';
+      const publicKey = 'M8RzOo6Ic7amypGSy';
+
+      // Këtu i dërgojmë të dhënat e formës (emri, email, mesazhi)
+      // të cilat do të përputhen me {{emri}} etj. te template-i
+      emailjs
+        .send(serviceID, templateID, this.contactForm.value, publicKey)
+        .then(() => {
+          alert('Mesazhi u dërgua! Kontrollo inbox-in tënd.');
+          this.contactForm.reset();
+        })
+        .catch((err) => {
+          console.error('Gabim nga EmailJS:', err);
+          alert('Ndodhi një gabim gjatë dërgimit.');
+        });
+    } else {
+      alert('Ju lutem plotësoni formën saktë!');
     }
   }
 }
