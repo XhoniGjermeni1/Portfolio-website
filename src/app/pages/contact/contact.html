@@ -24,11 +24,7 @@
 
       <div class="input-group">
         <label>Mesazhi juaj</label>
-        <textarea
-          formControlName="mesazhi"
-          rows="5"
-          placeholder="Për çfarë dëshironi të bisedojmë?"
-        ></textarea>
+        <textarea formControlName="mesazhi" rows="5" placeholder="..."></textarea>
 
         @if (contactForm.get('mesazhi')?.invalid && contactForm.get('mesazhi')?.touched) {
           <small class="error">Mesazhi duhet të ketë të paktën 10 karaktere.</small>
